@@ -1,0 +1,39 @@
+    *{
+        font-family: 'Open Sans', sans-serif!important;
+    }
+    .logo {
+        text-align:center;
+    }
+    .container {
+        padding:40px 0px;
+
+    }
+
+    .blogbutton {
+        position:absolute;
+        top:40px;
+        right:0px;
+    }
+
+    .btn{
+        display:block;
+        padding:10px;
+        font-size:14px;
+        border:1px solid black;
+    }
+
+    .subhead{
+        text-align:center;
+    }
+
+    .showcase {
+
+    }
+
+    .showcase img{
+        max-width:100%;
+    }
+
+    .content {
+        text-align:center;
+    }
