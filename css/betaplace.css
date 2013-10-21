@@ -1,32 +1,92 @@
-    *{
-        font-family: 'Open Sans', sans-serif!important;
+	body {
+        font-family: 'Open Sans', sans-serif;
+    }
+    h1,h2,h3,h4,h5,h6{
+        font-family: 'Open Sans', sans-serif;
+    }
+    h3{
+        font-weight:lighter;
+    }
+    h4{
+        font-size:40px;
+        line-height:40px;
+        margin-bottom:40px;
+        font-weight:lighter;
+    }
+    p{
+        line-height:26px;
     }
     .logo {
         text-align:center;
+    }
+    .logo a{
+        display: block;
+        margin-bottom: 34px;
     }
     .container {
         padding:40px 0px;
 
     }
 
-    .blogbutton {
-        position:absolute;
-        top:40px;
-        right:0px;
-    }
-
     .btn{
         display:block;
-        padding:10px;
+        padding:9px 29px;
         font-size:14px;
-        border:1px solid black;
+        border:1px solid #CCCCCC;
+        text-decoration:none;
+        font-weight: lighter;
+        font-size: 20px;
     }
+
+    .blogbutton-holder{
+        text-align:right;
+    }
+
+	@media only screen and (max-width: 767px) {
+        .blogbutton-holder{
+            text-align:center;
+        }
+    }
+    .blogbutton-desc{
+        margin-top:20px;
+    }
+
+    a.blogbutton {
+        display:inline-block;
+        padding:9px 15px 9px 29px;
+    }
+
 
     .subhead{
         text-align:center;
+        padding-top:45px;
+        width:100%
+    }
+    
+    .subhead>h3{
+        font-size:51px;
+        line-height:50px;
+        margin-bottom:40px !important;
     }
 
+    .subhead ul{
+        font-size:18px;
+        font-weight:lighter;
+        display:block;
+        height:20px;
+        margin-bottom:140px;
+    }
+
+/*    .option-list li:first-child{*/
+        /*text-align:left;*/
+    /*}*/
+
+    /*.option-list li:last-child{*/
+        /*text-align:right;*/
+    /*}*/
+
     .showcase {
+        margin-bottom:70px;
 
     }
 
@@ -36,4 +96,84 @@
 
     .content {
         text-align:center;
+        font-size:16px;
+        font-weight:normal;
+    }
+
+    .content section
+    {
+        margin-bottom:90px;
+    }
+
+    .working-hours{
+        text-align:center;
+    }
+    .working-hours .hours{
+        font-size:40px;
+        line-height:35px;
+    }
+    .working-hours .days{
+        font-size:20px;
+        line-height:40px;
+    }
+
+    ul.infotable{
+        margin:10px 0px;
+        padding:15px 0px;
+
+    }
+    ul.infotable>li:first-child{
+        border-left:1px solid #cccccc;
+        margin-left:9px!important;
+    }
+    ul.infotable>li{
+        border-right:1px solid #cccccc;
+        margin-right:9px!important;
+        min-height:128px;
+        line-height:28px;
+        padding:10px 0px;
+
+    }
+
+	@media only screen and (max-width: 767px) {
+        ul.infotable>li:first-child{
+                border-left:0px solid #cccccc;
+                border-bottom:1px solid #cccccc;
+        }
+        ul.infotable>li{
+                border:0px;
+                border-bottom:1px solid #cccccc;
+                min-height:98px;
+                margin-bottom:70px;
+
+        }
+    }
+    .infohead{
+        margin-bottom:20px;
+    }
+	@media only screen and (max-width: 767px) {
+        .infohead{
+            font-weight:bold;
+            margin-top:20px;
+        }
+    }
+
+    .pricetime{
+        font-size:20px;
+    }
+
+    .price{
+        font-size:37px;
+        font-weight:normal;
+        margin-bottom:10px;
+    }
+
+
+    .footer{
+        margin-top:30px;
+
+    }
+
+    #map-canvas{
+        height:320px;
     }
