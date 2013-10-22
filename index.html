@@ -9,7 +9,7 @@
   ================================================== -->
 	<meta charset="utf-8">
 	<title>Betaplace</title>
-	<meta name="description" content="Коворкінг у Лвьові. Олени Степанівни 49. info@betaplace.com.ua">
+	<meta name="description" content="Простір, відкритий для співпраці. Коворкінг у Лвьові. Олени Степанівни 49. info@betaplace.com.ua">
 	<meta name="author" content="Betaplace">
 
     <link rel="canonical" href="http://betaplace.com.ua/" />
@@ -60,9 +60,16 @@
     var map;
     function initialize() {
       var position = new google.maps.LatLng(49.84274634633558,23.998523354530334)
+
+      if($('#map-canvas').width() === 940){
+        var mapcenter = new google.maps.LatLng(49.84274634633558,24.007037)
+      }else{
+        var mapcenter = position;
+      }
+
       var mapOptions = {
-        zoom: 17,
-        center: position,
+        zoom: 15,
+        center: mapcenter,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
       var map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -141,7 +148,7 @@
         <div class="content">
           <section class="">
             <a name="coworking"><h4 class="sixteen columns">Коворкінг</h4></a>
-              <p>Місце де збираються люди з різних сфер, щоб комфортно працювати. Комфортний простір і офісна інфраструктура дозволяють зосередитися на роботі. Спільнота креативних людей і професіоналів — знайти нові контакти, поділитися ідеями, започаткувати співпрацю.</p>
+            <p>Місце де збираються люди з різних сфер, щоб комфортно працювати.<br/> Зручний простір і офісна інфраструктура дозволяють зосередитися на роботі. <br/>Спільнота креативних людей і професіоналів — знайти нові контакти, поділитися ідеями, започаткувати співпрацю.</p>
           </section>
           <section class="row">
             <a name="hours"><h4 class="sixteen columns">Працюємо щодня</h4></a>
@@ -164,7 +171,7 @@
           </section>
           <section class="row">
             <a name="community"><h4 class="sixteen columns">Спільнота</h4></a>
-              <p>Коворкінг — це люди. Наша мета — формування спільноти, з якою можна ефективно реалізовувати проекти, будувати бізнес. Творити нове середовище. Основні наші цінності — це відкритість і результативність. Скоро ми розповімо про всіх учасників betaplace. </p>
+            <p>Коворкінг — це люди. <br/>Основні наші цінності — це відкритість і результативність.<br/> Скоро ми розповімо про всіх учасників betaplace. </p>
           </section>
           <section class="row">
             <a name="contact"><h4 class="sixteen columns">Контакти</h4></a>
@@ -197,16 +204,13 @@
             <br> Олени&nbsp;Степанівни&nbsp;49
             </li> 
           </ul>
+            <div  class="sixteen columns" id="map-canvas"></div>
           </section>
 
-          <section>
-            <div  class="sixteen columns" id="map-canvas">
-              
-            </div>
+            
               <!--<iframe class="sixteen columns" src="http://mapsengine.google.com/map/view?mid=z7ZpkYZCDSBU.kr1jXCRsl_l4" width="940" height="320"></iframe>-->
-          </section>
         <div class="sixteen columns footer">
-          betaplace — 2013
+          <a href="/"><img src="/img/bp_32x32.png"></a>
           
         </div>
         </div> <!-- content-->
