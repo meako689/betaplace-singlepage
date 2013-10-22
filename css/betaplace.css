@@ -22,6 +22,9 @@
     .logo a{
         display: block;
         margin-bottom: 34px;
+        height:140px;
+        width:140px;
+        background-image:url('../img/logo.svg');
     }
     .container {
         padding:40px 0px;
@@ -215,12 +218,14 @@
     .flex-direction-nav .flex-prev {
         background-image:url("../img/bg_direction_nav_left.png");
         background-position: 5% 50%;
+        background-repeat:no-repeat;
         left: 0px;
     }
 
     .flex-direction-nav .flex-next {
         background-position: 95% 50%;
         background-image:url("../img/bg_direction_nav_right.png");
+        background-repeat:no-repeat;
         right: 0px;
     }
     .flex-direction-nav a:hover{

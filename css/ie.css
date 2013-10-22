@@ -1,0 +1,8 @@
+    .logo a{
+        display: block;
+        margin-bottom: 34px;
+        height:140px;
+        width:140px;
+        background-image:url('../img/logo.png');
+    }
+
