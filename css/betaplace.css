@@ -36,7 +36,6 @@
 
     .btn{
         display:block;
-        padding:9px 29px;
         font-size:14px;
         /*border:1px solid #CCCCCC;*/
         text-decoration:none;
@@ -59,7 +58,7 @@
 
     a.blogbutton {
         display:inline-block;
-        padding:9px 15px 9px 29px;
+        padding:0px;
     }
 
 
