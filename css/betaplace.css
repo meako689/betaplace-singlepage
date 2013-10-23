@@ -26,6 +26,9 @@
         width:140px;
         background-image:url('../img/logo.svg');
     }
+    .lang a{
+        text-decoration:none;
+    }
     .container {
         padding:40px 0px;
 
