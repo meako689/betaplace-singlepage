@@ -60,57 +60,6 @@
       ga('send', 'pageview');
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-
-    <script>
-    var map;
-    function initialize() {
-      var position = new google.maps.LatLng(49.84274634633558,23.998523354530334)
-
-      if($('#map-canvas').width() === 940){
-        var mapcenter = new google.maps.LatLng(49.84274634633558,24.007037)
-      }else{
-        var mapcenter = position;
-      }
-
-      var mapOptions = {
-        zoom: 15,
-        center: mapcenter,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      var map = new google.maps.Map(document.getElementById('map-canvas'),
-          mapOptions);
-
-      var marker = new google.maps.Marker({
-          position: position,
-          map: map,
-          title: 'Betaplace'
-      });
-
-    }
-
-    google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-    <script type="text/javascript" charset="utf-8">
-      $(window).load(function() {
-
-        function loadImg(slider) {
-            nextSlide = slider.animatingTo+1;
-            if (nextSlide < slider.count){
-              imgtag = $(slider.slides[nextSlide].firstChild); //next slide
-              if (imgtag.hasClass('lazy')){
-                imgtag.attr('src', imgtag.data('original'));
-                imgtag.removeClass('lazy');
-              }
-            }
-        }
-        $('.flexislider').flexslider({
-          animation: "slide",
-          start: loadImg,
-          after: loadImg
-        });
-      });
-    </script>
 
 </head>
 <body>
@@ -132,24 +81,14 @@
       <div class="offset-by-three four columns blogbutton-holder">
         <a class="blogbutton btn" href="/blog/">Блог&nbsp;&rarr;</a>
         <div class="blogbutton-desc">
-        Як&nbsp;це&nbsp;було:&nbsp;LIVE
+        Як&nbsp;це&nbsp;було:&nbsp;БЛОГ
         </div>
       </div>
       </div>
         <div class="subhead">
-          <h3 class="sixteen columns">Простір, відкритий для співпраці</h3>
+          <h3 class="sixteen columns">So long and thanks for all the fish! </h3>
         </div>
         <div class="sixteen columns flexislider clearfix">
-          <ul class="slides">
-            <!--first and last slides shouldnt be lazy due to specific of slider-->
-            <li class="slide"><img src="/img/1.jpg"></li>
-            <li class="slide"><img class="lazy" data-original="/img/2.jpg" src="/img/placeholder.jpg"></li>
-            <li class="slide"><img class="lazy" data-original="/img/3.jpg" src="/img/placeholder.jpg"></li>
-            <li class="slide"><img class="lazy" data-original="/img/4.jpg" src="/img/placeholder.jpg"></li>
-            <li class="slide"><img class="lazy" data-original="/img/5.jpg" src="/img/placeholder.jpg"></li>
-            <li class="slide"><img class="lazy" data-original="/img/6.jpg" src="/img/placeholder.jpg"></li>
-            <li class="slide"><img src="/img/7.jpg"></li>
-          </ul>
         </div>
         <div class="clear">
         </div>
@@ -157,29 +96,8 @@
         <div class="content">
           <section class="">
             <a name="coworking"><h4 class="sixteen columns">Коворкінг</h4></a>
-            <p>Це місце, де збираються люди з різних сфер щоб комфортно працювати.<br/> Зручний простір і офісна інфраструктура дозволяють зосередитися на роботі. <br/>Спільнота креативних людей і професіоналів — знайти нові контакти, поділитися ідеями, започаткувати співпрацю.</p>
-          </section>
-          <section class="row">
-            <a name="hours"><h4 class="sixteen columns">Працюємо</h4></a>
-            <div class="working-hours">
-              <div class="hours">10:00
-              —
-              22:00</div>
-            </div>
-          </section>
-          <section class="row">
-            <a  name="pricing"><h4 class="sixteen columns">Тарифи</h4></a>
-          <ul class="infotable">
-            <li class="four columns"><div class="pricetime infohead">День</div><div class="price">150₴</div></li> 
-            <li class="four columns"><div class="pricetime infohead">Тиждень</div><div class="price">500₴</div></li> 
-            <li class="four columns"><div class="pricetime infohead">Місяць</div><div class="price">1800₴</div></li> 
-          </ul>
-          Проведення майстер-класів та презентацій — від 200 ₴/година. <a href="#contact">Зв’яжіться з нами</a>
-          <div class="small">* ₴ - міжнародний знак гривні</a>
-          </section>
-          <section class="row">
-            <a name="community"><h4 class="sixteen columns">Спільнота</h4></a>
-            <p>Коворкінг — це люди. <br/>Основні наші цінності — це відкритість і результативність.<br/> Кожен може знайти себе в спільноті та просторі</p>
+            <p>Зараз ми зачинені на невизначений термін і більше не надаємо послуг коворкінгу чи майдайнчику для подій. <br/> Але будемо раді вам допомогти організувати вашу подію чи познайомити зі спільнотою</p>
+            <img src="img/dolphins.gif" alt="" />
           </section>
           <section class="row">
             <a name="contact"><h4 class="sixteen columns">Контакти</h4></a>
@@ -188,7 +106,6 @@
             <div class="infohead">
              телефонуйте:
             </div>
-            +380&nbsp;32&nbsp;298&nbsp;77&nbsp;95<br>
             +380&nbsp;68&nbsp;686&nbsp;88&nbsp;25<br>
             </li> 
             <li class="four columns">
@@ -207,13 +124,9 @@
             </li>
             <li class="four columns">
             <div class="infohead">
-              приходьте:
             </div>
-            Львів
-            <br> Олени&nbsp;Степанівни&nbsp;49а
             </li> 
           </ul>
-            <div  class="sixteen columns" id="map-canvas"></div>
           </section>
 
             

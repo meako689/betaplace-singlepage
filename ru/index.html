@@ -60,57 +60,6 @@
       ga('send', 'pageview');
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-
-    <script>
-    var map;
-    function initialize() {
-      var position = new google.maps.LatLng(49.84274634633558,23.998523354530334)
-
-      if($('#map-canvas').width() === 940){
-        var mapcenter = new google.maps.LatLng(49.84274634633558,24.007037)
-      }else{
-        var mapcenter = position;
-      }
-
-      var mapOptions = {
-        zoom: 15,
-        center: mapcenter,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      var map = new google.maps.Map(document.getElementById('map-canvas'),
-          mapOptions);
-
-      var marker = new google.maps.Marker({
-          position: position,
-          map: map,
-          title: 'Betaplace'
-      });
-
-    }
-
-    google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-    <script type="text/javascript" charset="utf-8">
-      $(window).load(function() {
-
-        function loadImg(slider) {
-            nextSlide = slider.animatingTo+1;
-            if (nextSlide < slider.count){
-              imgtag = $(slider.slides[nextSlide].firstChild); //next slide
-              if (imgtag.hasClass('lazy')){
-                imgtag.attr('src', imgtag.data('original'));
-                imgtag.removeClass('lazy');
-              }
-            }
-        }
-        $('.flexislider').flexslider({
-          animation: "slide",
-          start: loadImg,
-          after: loadImg
-        });
-      });
-    </script>
 
 </head>
 <body>
@@ -132,7 +81,7 @@
       <div class="offset-by-three four columns blogbutton-holder">
         <a class="blogbutton btn" href="/blog/">Блог&nbsp;&rarr;</a>
         <div class="blogbutton-desc">
-        Как&nbsp;все&nbsp;происходит:&nbsp;LIVE
+        Как&nbsp;все&nbsp;получилось:&nbsp;БЛОГ
         </div>
       </div>
       </div>
@@ -140,16 +89,6 @@
           <h3 class="sixteen columns">Коворкинг во Львове</h3>
         </div>
         <div class="sixteen columns flexislider clearfix">
-          <ul class="slides">
-            <!--first and last slides shouldnt be lazy due to specific of slider-->
-            <li class="slide"><img src="/img/1.jpg"></li>
-            <li class="slide"><img class="lazy" data-original="/img/2.jpg" src="/img/placeholder.jpg"></li>
-            <li class="slide"><img class="lazy" data-original="/img/3.jpg" src="/img/placeholder.jpg"></li>
-            <li class="slide"><img class="lazy" data-original="/img/4.jpg" src="/img/placeholder.jpg"></li>
-            <li class="slide"><img class="lazy" data-original="/img/5.jpg" src="/img/placeholder.jpg"></li>
-            <li class="slide"><img class="lazy" data-original="/img/6.jpg" src="/img/placeholder.jpg"></li>
-            <li class="slide"><img src="/img/7.jpg"></li>
-          </ul>
         </div>
         <div class="clear">
         </div>
@@ -157,32 +96,10 @@
         <div class="content">
           <section class="">
             <a name="coworking"><h4 class="sixteen columns">Коворкинг</h4></a>
-            <p>Место, где собираются люди разных профессий, чтобы комфортно работать. <br/> Удобное пространство и офисная инфраструктура позволяют сосредоточиться на работе. <br/> Сообщество профессионалов — найти новые контакты, поделиться идеями, начать сотрудничество.
-            </p>
+            <p>Коворкинг пока закрыт. Но мы с радостью поможем вам провести мероприятие или познакомить с сообществом            </p>
           </section>
           <section class="row">
             <a name="hours"><h4 class="sixteen columns">Работаем</h4></a>
-            <div class="working-hours">
-              <div class="hours">10:00
-              —
-              22:00</div>
-            </div>
-          </section>
-          <section class="row">
-            <a  name="pricing"><h4 class="sixteen columns">Тарифы</h4></a>
-            День тест-драйва бесплатно. Командам от трех человек — скидки.
-          <ul class="infotable">
-            <li class="four columns"><div class="pricetime infohead">День</div><div class="price">150 uah</div></li> 
-            <li class="four columns"><div class="pricetime infohead">Неделя</div><div class="price">500 uah</div></li> 
-            <li class="four columns"><div class="pricetime infohead">Месяц</div><div class="price">1800 uah</div></li> 
-            <li class="four columns"><div class="pricetime infohead">Выходные месяца</div><div class="price">400₴</div></li> 
-          </ul>
-          Проведение мастер-классов и презентаций — по договоренности.
-          </section>
-          <section class="row">
-            <a name="community"><h4 class="sixteen columns">Сообщество</h4></a>
-            <p>Коворкинг — это люди. <br/>Наши основные ценности — это открытость и результативность. <br/> Скоро мы расскажем обо всех участниках betaplace.</p>
-          </section>
           <section class="row">
             <a name="contact"><h4 class="sixteen columns">Контакты</h4></a>
           <ul class="infotable">
@@ -190,7 +107,6 @@
             <div class="infohead">
              звоните:
             </div>
-            +380&nbsp;32&nbsp;298&nbsp;77&nbsp;95<br>
             +380&nbsp;68&nbsp;686&nbsp;88&nbsp;25<br>
             </li> 
             <li class="four columns">
@@ -209,13 +125,9 @@
             </li> 
             <li class="four columns">
             <div class="infohead">
-              приходите:
             </div>
-            Львов
-            <br> Елены&nbsp;Степановны&nbsp;49
             </li> 
           </ul>
-            <div  class="sixteen columns" id="map-canvas"></div>
           </section>
 
             

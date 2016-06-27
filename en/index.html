@@ -60,57 +60,6 @@
       ga('send', 'pageview');
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-
-    <script>
-    var map;
-    function initialize() {
-      var position = new google.maps.LatLng(49.84274634633558,23.998523354530334)
-
-      if($('#map-canvas').width() === 940){
-        var mapcenter = new google.maps.LatLng(49.84274634633558,24.007037)
-      }else{
-        var mapcenter = position;
-      }
-
-      var mapOptions = {
-        zoom: 15,
-        center: mapcenter,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      var map = new google.maps.Map(document.getElementById('map-canvas'),
-          mapOptions);
-
-      var marker = new google.maps.Marker({
-          position: position,
-          map: map,
-          title: 'Betaplace'
-      });
-
-    }
-
-    google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-    <script type="text/javascript" charset="utf-8">
-      $(window).load(function() {
-
-        function loadImg(slider) {
-            nextSlide = slider.animatingTo+1;
-            if (nextSlide < slider.count){
-              imgtag = $(slider.slides[nextSlide].firstChild); //next slide
-              if (imgtag.hasClass('lazy')){
-                imgtag.attr('src', imgtag.data('original'));
-                imgtag.removeClass('lazy');
-              }
-            }
-        }
-        $('.flexislider').flexslider({
-          animation: "slide",
-          start: loadImg,
-          after: loadImg
-        });
-      });
-    </script>
 
 </head>
 <body>
@@ -137,19 +86,9 @@
       </div>
       </div>
         <div class="subhead">
-          <h3 class="sixteen columns">A Better place to work</h3>
+          <h3 class="sixteen columns">So long and thanks for all the fish! </h3>
         </div>
         <div class="sixteen columns flexislider clearfix">
-          <ul class="slides">
-            <!--first and last slides shouldnt be lazy due to specific of slider-->
-            <li class="slide"><img src="/img/1.jpg"></li>
-            <li class="slide"><img class="lazy" data-original="/img/2.jpg" src="/img/placeholder.jpg"></li>
-            <li class="slide"><img class="lazy" data-original="/img/3.jpg" src="/img/placeholder.jpg"></li>
-            <li class="slide"><img class="lazy" data-original="/img/4.jpg" src="/img/placeholder.jpg"></li>
-            <li class="slide"><img class="lazy" data-original="/img/5.jpg" src="/img/placeholder.jpg"></li>
-            <li class="slide"><img class="lazy" data-original="/img/6.jpg" src="/img/placeholder.jpg"></li>
-            <li class="slide"><img src="/img/7.jpg"></li>
-          </ul>
         </div>
         <div class="clear">
         </div>
@@ -157,28 +96,8 @@
         <div class="content">
           <section class="">
             <a name="coworking"><h4 class="sixteen columns">Coworking</h4></a>
-            <p>A shared working environment, for people with different backgrounds.<br/> Comfortable space and office infrastructure help to be focused on reaching goals. <br/> Community of creative professionals helps to find new connections, share ideas and collaborate.</p>
-          </section>
-          <section class="row">
-            <a name="hours"><h4 class="sixteen columns">We work</h4></a>
-            <div class="working-hours">
-              <div class="hours">10:00 am
-              —
-              10:00 pm</div>
-            </div>
-          </section>
-          <section class="row">
-            <a  name="pricing"><h4 class="sixteen columns">Pricing</h4></a>
-          <ul class="infotable">
-            <li class="four columns"><div class="pricetime infohead">Day</div><div class="price">150 UAH</div></li> 
-            <li class="four columns"><div class="pricetime infohead">Week</div><div class="price">500 UAH</div></li> 
-            <li class="four columns"><div class="pricetime infohead">Month</div><div class="price">1800 UAH</div></li> 
-          </ul>
-          Workshops and presentations — let's discuss.
-          </section>
-          <section class="row">
-            <a name="community"><h4 class="sixteen columns">Community</h4></a>
-            <p>Members — are main value of our coworking space. <br/> Our main values are opennes and result orientation. <br/>Soon we will tell you more about our community. </p>
+            <p>We no longer offer coworking or events space. But will be happy to stay in touch and help you to connect with local community.</p>
+            <img src="../img/dolphins.gif" alt="" />
           </section>
           <section class="row">
             <a name="contact"><h4 class="sixteen columns">Contact</h4></a>
@@ -187,7 +106,6 @@
             <div class="infohead">
              call us:
             </div>
-            +380&nbsp;32&nbsp;298&nbsp;77&nbsp;95<br>
             +380&nbsp;68&nbsp;686&nbsp;88&nbsp;25<br>
             </li> 
             <li class="four columns">
@@ -205,14 +123,8 @@
               <a class="fbbutton" href="http://twitter.com/betaplacelviv">twitter</a><br>
             </li> 
             <li class="four columns">
-            <div class="infohead">
-              visit us:
-            </div>
-            Lviv
-            <br> Oleny&nbsp;Stepanivny&nbsp;,49
             </li> 
           </ul>
-            <div  class="sixteen columns" id="map-canvas"></div>
           </section>
 
             
